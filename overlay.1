@@ -1,0 +1,16 @@
+.Dd $Mdocdate: May 30 2021 $
+.Dt OVERLAY 1
+.Os
+.Sh NAME
+.Nm overlay
+.Nd overlay output from multiple pipelined commands
+.Sh SYNOPSIS
+.Nm
+\fI'cmd1 | cmd2 | ...'\fR
+.Sh DESCRIPTION
+.Nm overlay
+performs a Unix-like command pipeline, but dumps output
+of all commands to stdout while adding metadata which specifies
+which output belongs to which command.
+.Sh EXAMPLES
+.Dl $ overlay 'ls -1 | sort -r'

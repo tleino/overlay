@@ -1,0 +1,28 @@
+overlay
+=======
+
+overlay performs a Unix-like command pipeline, but dumps output
+of all commands to stdout while adding metadata which specifies
+which output belongs to which command.
+
+Example
+=======
+
+$ overlay 'cmd1 | sort'
+1: foo
+1: bar
+1-exit(0)
+2: bar
+2: foo
+2-exit(0)
+
+Dependencies
+============
+
+None
+
+Configure & Install
+===================
+
+./configure ~
+make install
